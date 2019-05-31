@@ -25,7 +25,7 @@ sudo certbot --apache
 cd /usr/local/bin 
 wget https://raw.githubusercontent.com/mikecote355/Linux-unifi/master/unifi_ssl_import.sh
 READ UNIFI_HOSTNAME
-sudo sed -i 's/UNIFI_HOSTNAME=hostname.example.com/UNIFI_HOSTNAME=$UNIFI_HOSTNAME/g' /usr/local/bin/unifi_ssl_import.sh > /usr/local/bin/unifi_ssl_import.sh
+sudo cat /usr/local/bin/unifi_ssl_import.sh | sed -i 's/UNIFI_HOSTNAME=hostname.example.com/UNIFI_HOSTNAME=$UNIFI_HOSTNAME/g' > /usr/local/bin/unifi_ssl_import.sh
 chmod +x unifi_ssl_import
 cd 
 sudo unifi_ssl_import
