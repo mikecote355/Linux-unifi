@@ -24,9 +24,11 @@ sudo certbot --apache
 
 cd /usr/local/bin 
 wget https://raw.githubusercontent.com/mikecote355/Linux-unifi/master/sslimport
-READ UNIFI_HOSTNAME
-sudo cat /usr/local/bin/sslimport | sed -i 's/UNIFI_HOSTNAME=hostname.example.com/UNIFI_HOSTNAME=$UNIFI_HOSTNAME/g' > /usr/local/bin/sslimport
+#Failed to work
+#READ UNIFI_HOSTNAME
+#Failing to work
+#sudo cat /usr/local/bin/sslimport | sed -i 's/UNIFI_HOSTNAME=hostname.example.com/UNIFI_HOSTNAME=$UNIFI_HOSTNAME/g' > /usr/local/bin/sslimport
 chmod +x sslimport
 cd 
-sudo unifi_ssl_import
+sudo sslimport
 echo "Install Complete"
